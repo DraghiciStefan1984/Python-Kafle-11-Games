@@ -21,6 +21,17 @@ def line(a, b, x, y):
     turtle.goto(a, b)
     turtle.down()
     turtle.goto(x, y)
+
+def square(x, y, size, name):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(name)
+    turtle.begin_fill()
+    for count in range(4):
+        turtle.forward(size)
+        turtle.left(90)
+    turtle.end_fill()
     
 class Vector(collections.Sequence):
     PRECISION=6
